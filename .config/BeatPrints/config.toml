@@ -1,0 +1,7 @@
+[general]
+search_limit = 8
+output_directory = "/home/zen/Pictures/Posters"
+
+[credentials]
+client_id = "18c32439752848abb37cb6d005485e58"
+client_secret = "ef307b65e1e84251a786072924a84578"

@@ -1,0 +1,41 @@
+#"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 3
+
+[[blocks]]
+alignment = "left"
+newline = true
+type = "prompt"
+
+  [[blocks.segments]]
+  foreground = "#00FF00"
+  template = "<i> {{.UserName}}<i>@{{.HostName}} "
+  type = "text"
+
+
+
+  [[blocks.segments]]
+  foreground = "#fff"
+  template = "in "
+  type = "os"
+
+  [[blocks.segments]]
+  foreground = "#0ff4c6"
+  template = "{{.PWD}}"
+  exclude_folders = [ "/super/secret/project" ]
+  type = "path"
+
+    [blocks.segments.properties]
+    style = "folder"
+
+  [[blocks.segments]]
+  background = "transparent"
+  foreground = "#00FF00"
+  foreground_templates =  [
+            "{{ if gt .Code 0 }}#ff0000{{ end }}"
+          ]
+  template = "> "
+  type = "text"
+
+
+
+
