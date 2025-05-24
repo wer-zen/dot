@@ -1,0 +1,8 @@
+* {
+    all: unset;
+}
+
+#inner-bar #metrics-small {
+    background: #000;
+    border: 1px white solid;
+}

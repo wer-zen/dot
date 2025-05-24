@@ -1,0 +1,8 @@
+* {
+    all: unset;
+}
+
+#outer-bar {
+    background: #000000;
+    border: solid #444444 2px;
+}
