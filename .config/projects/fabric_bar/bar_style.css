@@ -3,6 +3,55 @@
 }
 
 #outer-bar {
+}
+
+#inner-bar {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px #444 solid;
+}
+
+/* Tooltip styling */
+tooltip {
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-family: JetBrainsMono Nerd Font Mono;
+}
+
+tooltip label {
+    color: inherit;
+    font-weight: normal;
+}
+
+/* For markup tooltips with rich formatting */
+tooltip * {
     background: #000000;
-    border: solid #444444 2px;
+}
+
+#workspaces {
+    font-size: 16px;
+}
+
+.workspace-button {
+    color: #444;
+}
+
+.workspace-button:hover {
+    color: #aaaaaa;
+    font-weight: bold;
+}
+
+.workspace-button.urgent {
+    color: #fff;
+    font-weight: bold;
+}
+
+.workspace-button.active {
+    color: #fff;
+    font-weight: bold;
 }

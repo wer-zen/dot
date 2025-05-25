@@ -29,6 +29,10 @@ gamemode: str = "&#xf026;"
 gamemode_off: str = "&#xf111;"
 close : str = "&#xeb55;"
 
+
+# Arrows
+down_arrow: str = "&#xea16;"
+up_arrow: str = "&#xea25;"
 # Circles
 temp: str = "&#xeb38;"
 disk: str = "&#xea88;"

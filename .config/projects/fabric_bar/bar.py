@@ -5,17 +5,19 @@ from fabric.widgets.centerbox import CenterBox
 from fabric.widgets.wayland import WaylandWindow as Window
 from fabric.utils.helpers import get_relative_path, monitor_file
 
-# Import your battery widget
-from battery import Battery  # Assuming battery.py is in the same directory
+from modules.core import *
+from modules.audio import *
+from modules.workspaces import *
 
 class StatusBar(Window):
     def __init__(self, **kwargs):
         super().__init__(
 
             name="outer-bar",
+            title="outer-bar",  # Explicitly set title to match layer rule
             layer="top",
-            anchor="top left right",
-            margin="20px 10px 10px 20px",
+            anchor="bottom left right",
+            margin="0px 500px 10px 500px",
             exclusivity="auto",
             visible=True,
             all_visible=True,
@@ -23,19 +25,47 @@ class StatusBar(Window):
 
         )
 
+        self.set_app_paintable(True)
+        screen = self.get_screen()
+        visual = screen.get_rgba_visual()
+        if visual:
+            self.set_visual(visual)
+
+        self.workspaces = Workspaces(
+            name="workspaces",
+            title="workspaces",
+            spacing=10,
+            style_classes=["workspace-container"],
+            tooltip_text="Click to switch workspace, scroll to navigate",
+            buttons_factory=lambda id: WorkspaceButton(
+            id=id,
+            label=str(id) if id != 10 else "0",
+            style_classes=["workspace-button"],
+            tooltip_text=f"Workspace {id}",
+            style="font-family: JetBrainsMono Nerd Font Mono "
+            )
+        )
 
 
         # Create the main container
-        self.main = CenterBox(name="inner-bar", spacing=30)
+        self.main = CenterBox(name="inner-bar", h_expand=False)
 
         # Create widgets
-        self.date_time = DateTime()
-        self.battery = Battery()  # Create battery widget
+        self.date_time = DateTime(
+            style="padding-right: 20px; font-family: JetBrainsMono Nerd Font Mono",
+            v_align="center",
+            h_expand=False,
+
+            tooltip_text="Current date and time"
+
+        )
 
         # Add widgets to different sections of the CenterBox
-        self.main.center_children = self.date_time
-        self.main.end_children = self.battery
+        self.main.end_children = self.date_time
         # Add the main container to the window
+
+        self.main.center_children = self.workspaces
+
         self.add(self.main)
 
         # Force minimum height at GTK level
