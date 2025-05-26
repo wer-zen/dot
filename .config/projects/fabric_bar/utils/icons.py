@@ -15,8 +15,18 @@ windows: str = "&#xefe6;"
 colorpicker: str = "&#xebe6;"
 media: str = "&#xf00d;"
 
-#Toolbox
+# Greek
+alpha: str = "&#xf543;"
+beta: str = "&#xf544;"
+omega: str = "&#xeb97;"
+delta: str = "&#xf53c;"
+lambda_: str = "&#xf541;"
 
+#tree
+tree: str = "&#x1001a;"
+leaf: str = "&#xff44;"
+
+#Toolbox
 toolbox: str = "&#xebca;"
 ssfull: str = "&#xec3c;"
 ssregion: str = "&#xf201;"
@@ -33,10 +43,11 @@ close : str = "&#xeb55;"
 # Arrows
 down_arrow: str = "&#xea16;"
 up_arrow: str = "&#xea25;"
+
 # Circles
 temp: str = "&#xeb38;"
 disk: str = "&#xea88;"
-battery: str = "&#xea38;"
+battery: str = "&#xf668;"
 memory: str = "&#xfa97;"
 cpu: str = "&#xef8e;"
 gpu: str = "&#xf233;"
@@ -64,16 +75,22 @@ reboot: str = "&#xeb13;"
 shutdown: str = "&#xeb0d;"
 
 # Power Manager
-power_saving: str = "&#xed4f;"
-power_balanced: str = "&#xfa77;"
+power_saving: str = "&#xef3c;"
+power_balanced: str = "&#xffbd;"
 power_performance: str = "&#xec45;"
-charging: str = "&#xefef;"
-discharging: str = "&#xefe9;"
-alert: str = "&#xea06;"
-bat_charging: str = "&#xeeca;"
-bat_discharging: str = "&#xf0a1;"
-bat_low: str = "&#xff1d;"
-bat_full: str = "&#xea38;"
+charging: str = "&#xef3b;"
+alert: str = "&#xff1d;"
+
+# Charging
+bat_charging_full: str = "&#xf276;"
+bat_charging: str = "&#xea33;"
+
+# Discharging
+bat_discharging_high: str = "&#xea32;"
+bat_discharging_low: str = "&#xea2f;"
+bat_discharging_medium: str = "&#xea30;"
+bat_discharging_medium_high: str = "&#xea31;"
+
 
 
 # Applets

@@ -4,7 +4,7 @@ from fabric.widgets.eventbox import EventBox
 
 from fabric.core.fabricator import Fabricator
 from fabric.audio import Audio  # For pulseaudio equivalent
-from icons import *
+from utils.icons import *
 import time
 import psutil
 

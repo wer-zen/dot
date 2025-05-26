@@ -2,7 +2,7 @@ from fabric.audio import Audio
 from fabric.widgets.label import Label
 from fabric.widgets.eventbox import EventBox
 
-from icons import *
+from utils.icons import *
 
 class AudioWidget(EventBox):
     def __init__(self):

@@ -5,9 +5,14 @@ from fabric.widgets.centerbox import CenterBox
 from fabric.widgets.wayland import WaylandWindow as Window
 from fabric.utils.helpers import get_relative_path, monitor_file
 
+from modules.arch import *
 from modules.core import *
 from modules.audio import *
 from modules.workspaces import *
+from modules.battery import Battery
+
+import utils.icons as icons
+
 
 class StatusBar(Window):
     def __init__(self, **kwargs):
@@ -21,8 +26,6 @@ class StatusBar(Window):
             exclusivity="auto",
             visible=True,
             all_visible=True,
-
-
         )
 
         self.set_app_paintable(True)
@@ -50,20 +53,33 @@ class StatusBar(Window):
         # Create the main container
         self.main = CenterBox(name="inner-bar", h_expand=False)
 
-        # Create widgets
-        self.date_time = DateTime(
-            style="padding-right: 20px; font-family: JetBrainsMono Nerd Font Mono",
-            v_align="center",
-            h_expand=False,
-
-            tooltip_text="Current date and time"
-
+        self.battery = Battery(
+        style="""
+        padding-right:20px;
+        font-family: JetBrainsMono Nerd Font Mono;
+        """,
         )
 
-        # Add widgets to different sections of the CenterBox
-        self.main.end_children = self.date_time
-        # Add the main container to the window
+        self.arch = Label(
+            name="arch_icon",
+            markup=leaf,
+            style="""padding-left: 10px; font-weight: bold; font-size: 20px;""",
+            tooltip_text="Watchu lookin for?"
+        )
 
+        # Create widgets
+        self.date_time = DateTime(
+            name="datetime",
+            style="""
+            padding-right: 20px;
+            font-family: JetBrainsMono Nerd Font Mono;
+            """,
+            h_expand=False,
+            tooltip_text="Current date and time"
+        )
+
+        self.main.start_children = self.arch
+        self.main.end_children = [self.date_time, self.battery]
         self.main.center_children = self.workspaces
 
         self.add(self.main)
@@ -72,6 +88,8 @@ class StatusBar(Window):
         self.set_size_request(-1, 40)
 
         self.show_all()
+
+
 
 if __name__ == "__main__":
     bar = StatusBar()
