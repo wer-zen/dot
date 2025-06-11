@@ -27,7 +27,7 @@ style = "agnoster"
 
 [[blocks.segments]]
 type = "rust"
-foreground = "#B7410e"
+foreground = "#FF4F00"
 template = ">>  {{ .Full }} "
 
 [[blocks.segments]]
