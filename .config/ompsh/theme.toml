@@ -1,40 +1,56 @@
-#"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 version = 3
 
 [[blocks]]
 alignment = "left"
 type = "prompt"
 
-  [[blocks.segments]]
-  foreground = "#00FF00"
-  template = "<i> {{.UserName}}<i>@{{.HostName}} "
-  type = "text"
+[[blocks.segments]]
+style = "plain"
+template = " \uF303 "
+type = "os"
 
+[[blocks.segments]]
+foreground = "#F5F5F5"
+style = "plain"
+text = "&#xf38d;"
+type = "text"
 
+[[blocks.segments]]
+foreground = "#B80101"
+style = "plain"
+template = " {{ .PWD}} "
+type = "path"
 
-  [[blocks.segments]]
-  foreground = "#fff"
-  template = "in "
-  type = "os"
+[blocks.segments.properties]
+style = "agnoster"
 
-  [[blocks.segments]]
-  foreground = "#0ff4c6"
-  template = "{{.PWD}}"
-  exclude_folders = [ "/super/secret/project" ]
-  type = "path"
+[[blocks.segments]]
+type = "rust"
+foreground = "#B7410e"
+template = ">>  {{ .Full }} "
 
-    [blocks.segments.properties]
-    style = "folder"
+[[blocks.segments]]
+type = "python3"
+foreground = "#100e23"
+background = "#906cff"
+template = "  {{ .Full }} "
 
-  [[blocks.segments]]
-  background = "transparent"
-  foreground = "#00FF00"
-  foreground_templates =  [
-            "{{ if gt .Code 0 }}#ff0000{{ end }}"
-          ]
-  template = "> "
-  type = "text"
+# right prompt
+[[blocks]]
+alignment = "right"
+type = "rprompt"
 
+[[blocks.segments]]
+foreground = "#B80101"
+style = "plain"
+template = " <#F5F5F5>git:</>{{ .HEAD }} "
+type = "git"
 
+# time
+[[blocks.segments]]
+style = "plain"
+template = " {{ .CurrentDate | date .Format }} "
+type = "time"
 
 
