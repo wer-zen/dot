@@ -7,7 +7,7 @@ type = "prompt"
 
 [[blocks.segments]]
 style = "plain"
-template = " \uF303 "
+template = "\uF303"
 type = "os"
 
 [[blocks.segments]]
@@ -28,7 +28,7 @@ style = "agnoster"
 [[blocks.segments]]
 type = "rust"
 foreground = "#FF4F00"
-template = ">>  {{ .Full }} "
+template = " {{ .Full }} "
 
 [[blocks.segments]]
 type = "python3"
