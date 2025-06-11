@@ -53,18 +53,7 @@
           "type": "os",
           "style": "powerline"
         },
-        {
-          "properties": {
-            "cache_duration": "none",
-            "style": "full"
-          },
-          "trailing_diamond": "\ue0b4",
-          "template": " \udb80\ude56 {{ path .Path .Location }}",
-          "foreground": "#282a36",
-          "background": "#cccccc",
-          "type": "path",
-          "style": "diamond"
-        }
+        
       ]
     },
     {
@@ -157,27 +146,13 @@
           "type": "php",
           "style": "diamond"
         }
+    
+
+
       ]
     },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
-          "properties": {
-            "always_enabled": true,
-            "cache_duration": "none"
-          },
-          "template": "\u2570\u2500 ❯❯",
-          "foreground": "#f8f8f2",
-          "type": "text",
-          "style": "diamond"
-        }
-      ],
-      "newline": true
-    }
-  ],
+    
+  ]
   "version": 3,
-  "patch_pwsh_bleed": true,
   "final_space": true
 }

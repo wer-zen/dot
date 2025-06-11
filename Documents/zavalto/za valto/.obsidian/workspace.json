@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a3f7603ead469f58",
+        "id": "3ff29e9d5921b400",
         "type": "tabs",
         "children": [
           {
-            "id": "27cc19abf1f0ed0e",
+            "id": "05c7a4da54983982",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "temps/gramm_template.md",
+                "file": "summer_program_25.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "gramm_template"
-            }
-          },
-          {
-            "id": "743eec10d63c3d76",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "studies/school/grammar/Grammar_type_exam.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Grammar_type_exam"
-            }
-          },
-          {
-            "id": "296e09faa7b2b435",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "studies/school/grammar/Pronomi Personali.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Pronomi Personali"
+              "title": "summer_program_25"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -228,9 +179,13 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "296e09faa7b2b435",
+  "active": "05c7a4da54983982",
   "lastOpenFiles": [
     "studies/school/grammar/Grammar_type_exam.md",
+    "temps/gramm_template.md",
+    "temps/self_template.md",
+    "za valto/myself.md",
+    "summer_program_25.md",
     "studies/school/grammar/Pronomi Personali.md",
     "studies/school/grammar/Avverbio.md",
     "studies/school/grammar/Untitled.md",
@@ -243,7 +198,6 @@
     "temps/math_template.md",
     "tags/computer_science.md",
     "temps/cs_template.md",
-    "temps/gramm_template.md",
     "temps/geoscience_template.md",
     "temps/geography_template.md",
     "temps/chem_template.md",
@@ -255,9 +209,6 @@
     "tags/math.md",
     "temps/physics_template.md",
     "temps/newtime.md",
-    "tags/physics.md",
-    "temps/ttrg_template.md",
-    "tags/TTRG.md",
     "temps/Untitled",
     "studies/school/physics",
     "studies/school/math",

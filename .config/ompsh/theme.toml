@@ -3,7 +3,6 @@ version = 3
 
 [[blocks]]
 alignment = "left"
-newline = true
 type = "prompt"
 
   [[blocks.segments]]
