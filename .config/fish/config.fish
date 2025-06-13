@@ -21,4 +21,4 @@ abbr --add pac sudo pacman -S
 abbr --add matuconf nvim ~/dotfiles/.config/Ax-Shell/config/matugen/config.toml
 abbr --add ky nvim ~/dotfiles/.config/kitty/kitty.conf
 abbr --add hy nvim ~/dotfiles/.config/hypr/hyprland.conf
-abbr --add ls eza --oneline --reverse --sort=type
+abbr --add ls exa --oneline --reverse --sort=type
