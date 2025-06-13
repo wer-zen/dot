@@ -1111,3 +1111,19 @@ ls -a | sort-by type size
 z .c
 ls -a | sort-by type size
 cp nushell ~/dotfiles/.config
+ls
+clear
+ls
+clear
+las
+ls
+clear
+exit
+cn
+config nu
+z
+clear
+z 
+exit
+ls
+exit

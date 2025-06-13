@@ -1,56 +1,61 @@
-"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 version = 3
 
+[palette]
+  background = '#0e1416'
+  error = '#ff5945'
+  foreground = '#dee3e5'
+  outline = '#899295'
+  primary = '#83d3e3'
+  secondary = '#b1cbd1'
+  shadow = '#000000'
+  surface = '#0e1416'
+  surface_bright = '#343a3c'
+  tertiary = '#bcc5eb'
+
 [[blocks]]
-alignment = "left"
-type = "prompt"
+  type = 'prompt'
+  alignment = 'left'
 
-[[blocks.segments]]
-style = "plain"
-template = "\uF303"
-type = "os"
+  [[blocks.segments]]
+    template = ''
+    foreground = 'p:foreground'
+    type = 'os'
+    style = 'plain'
 
-[[blocks.segments]]
-foreground = "#F5F5F5"
-style = "plain"
-text = "&#xf38d;"
-type = "text"
+  [[blocks.segments]]
+    template = ' {{ .PWD }} '
+    foreground = 'p:primary'
+    type = 'path'
+    style = 'plain'
 
-[[blocks.segments]]
-foreground = "#B80101"
-style = "plain"
-template = " {{ .PWD}} "
-type = "path"
+    [blocks.segments.properties]
+      style = 'agnoster'
 
-[blocks.segments.properties]
-style = "agnoster"
+  [[blocks.segments]]
+    template = ' {{ .Full }} '
+    foreground = '#FF4F00'
+    type = 'rust'
+    style = 'plain'
 
-[[blocks.segments]]
-type = "rust"
-foreground = "#FF4F00"
-template = " {{ .Full }} "
+  [[blocks.segments]]
+    template = ' {{ .Full }} '
+    foreground = '#100e23'
+    background = '#906cff'
+    type = 'python'
+    style = 'plain'
 
-[[blocks.segments]]
-type = "python3"
-foreground = "#100e23"
-background = "#906cff"
-template = "  {{ .Full }} "
-
-# right prompt
 [[blocks]]
-alignment = "right"
-type = "rprompt"
+  type = 'rprompt'
+  alignment = 'right'
 
-[[blocks.segments]]
-foreground = "#B80101"
-style = "plain"
-template = " <#F5F5F5>git:</>{{ .HEAD }} "
-type = "git"
+  [[blocks.segments]]
+    template = ' git: {{ .HEAD }} '
+    foreground = 'p:secondary'
+    type = 'git'
+    style = 'plain'
 
-# time
-[[blocks.segments]]
-style = "plain"
-template = " {{ .CurrentDate | date .Format }} "
-type = "time"
-
-
+  [[blocks.segments]]
+    template = ' {{ .CurrentDate | date .Format }} '
+    foreground = 'p:primary'
+    type = 'time'
+    style = 'plain'
