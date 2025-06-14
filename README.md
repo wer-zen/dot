@@ -1,6 +1,8 @@
 # ZenFlow
 
-### Roadmap ()
+  Zen dotfiles, with a ___bizarre___ flow.
+
+### Roadmap 
 - [ ] ZenFlow_Lib
 - [ ] Bar
 - [ ] App Launcher
