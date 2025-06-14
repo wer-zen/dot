@@ -1,6 +1,8 @@
-# WerDots!
-- [ ] Implement install.sh files
-- [ ] Implement 
+# ZenFlow
+
+### Roadmap ()
+- [ ] ZenFlow_Lib
+- [ ] Bar
 - [ ] App Launcher
 - [ ] Bluetooth Manager
 - [ ] Calculator
@@ -14,8 +16,6 @@
 - [ ] Kanban Board
 - [ ] Network Manager
 - [ ] Notifications
-- [ ] OCR
-- [ ] Pins
 - [ ] Power Manager
 - [ ] Power Menu
 - [ ] Screen Recorder
@@ -29,6 +29,4 @@
 - [ ] Wallpaper Selector
 - [ ] Workspaces Overview
 - [ ] Multi-monitor support
-- [ ] Multimodal AI Assistant
-- [ ] OSD
-- [ ] OTP Manager
+- [ ] install.sh
